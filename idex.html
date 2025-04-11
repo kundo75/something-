@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome 💌</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #f5a3c7, #ffd6e8);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 2px 2px #ff69b4;
+    }
+
+    input, button {
+      padding: 12px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      margin-top: 10px;
+      width: 250px;
+    }
+
+    input {
+      background: #fff;
+    }
+
+    button {
+      background: #ff69b4;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background: #ff2e8d;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .heart {
+      font-size: 2rem;
+      animation: pulse 1s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Guess Who I’m Thinking About? 💖</h1>
+  <div class="heart">❤️</div>
+  <input type="text" id="nameInput" placeholder="Enter the name" />
+  <button onclick="checkName()">Enter</button>
+  <p class="error" id="errorText">Nope! Try again. 🥲</p>
+
+  <script>
+    function checkName() {
+      const input = document.getElementById("nameInput").value.trim().toLowerCase();
+      const correct = "evaristo";
+      const errorText = document.getElementById("errorText");
+
+      if (input === correct) {
+        window.location.href = "love.html";
+      } else {
+        errorText.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
