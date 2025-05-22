@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Royal Value Business Center</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Royal Value Business Center</h1>
+    <p>Your gateway to premium products</p>
+  </header>
+
+  
+    </div>
+  </header>
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1></h1>
+      <p>Where Quality Meets Affordability</p>
+      <a href="products.html" class="hero-btn">Explore More Products</a>
+
+ 
+  <section class="gallery-section">
+    <h2>Our Featured Products</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="images/Im8.jpg" alt="Product 1">
+        <p>Fast Chargers</p>
+      </div>
+      <div class="card">
+        <img src="images/Im2.jpg" alt="Product 2">
+        <p>Best-Selling Product 2</p>
+      </div>
+      <div class="card">
+        <img src="images/Im7.jpg" alt="Product 3">
+        <p>Customer Favorite 3</p>
+      </div>
+    </div>
+    
+  
+    </div>
+  </section>
+  
+  
+
+<!-- Contact & WhatsApp Buttons -->
+<div class="contact-buttons">
+    
+    <a href="https://wa.me/+260977615529" class="whatsapp-btn" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/30/ffffff/whatsapp.png" alt="WhatsApp" />
+    </a>
+  </div>
+  
+  <!-- Lightbox Container -->
+<div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  
+  <script>
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".close");
+  
+    // Open lightbox when image is clicked
+    document.querySelectorAll(".gallery img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "block";
+        lightboxImg.src = img.src;
+      });
+    });
+  
+    // Close lightbox
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+  
+    // Close when clicking outside image
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.style.display = "none";
+      }
+    });
+  </script>
+ 
+
+  
+</body>
+</html>
